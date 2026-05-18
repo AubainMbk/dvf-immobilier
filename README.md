@@ -1,4 +1,4 @@
-# DVF Immobilier — Analyse des marchés immobiliers français
+# DVF Immobilier : Analyse des marchés immobiliers français
 
 Dashboard data engineering construit sur les données open data DVF (Demandes de Valeurs Foncières)
 publiées par la DGFiP sur data.gouv.fr.
@@ -12,7 +12,7 @@ pour comparer les marchés entre grandes métropoles françaises et identifier l
 
 - **4 départements** : Gironde (33), Paris (75), Rhône (69), Bouches-du-Rhône (13)
 - **Données** : transactions immobilières 2021–2023 (Maisons & Appartements)
-- **Source** : [data.gouv.fr — DVF géolocalisées](https://www.data.gouv.fr/datasets/demandes-de-valeurs-foncieres-geolocalisees)
+- **Source** : [data.gouv.fr : DVF géolocalisées](https://www.data.gouv.fr/datasets/demandes-de-valeurs-foncieres-geolocalisees)
 
 ## Fonctionnalités
 
@@ -32,6 +32,40 @@ pour comparer les marchés entre grandes métropoles françaises et identifier l
 | Déploiement | Streamlit Cloud |
 
 ## Architecture
+
+data.gouv.fr (CSV.gz)
+│
+▼
+ingestion.py  ──►  data/raw/dvf_{year}{dept}.parquet
+│
+▼
+transform.py  ──►  data/processed/dvf{year}.parquet
+│
+▼
+features.py   ──►  data/processed/features.parquet
+│
+▼
+app.py (Streamlit)
+
+## Lancement
+
+```bash
+# 1. Installer les dépendances
+pip install -r requirements.txt
+
+# 2. Placer les fichiers CSV.gz dans data/raw/
+#    Télécharger depuis : https://files.data.gouv.fr/geo-dvf/latest/csv/{année}/departements/{dept}.csv.gz
+
+# 3. Exécuter le pipeline
+python src/ingestion.py
+python src/transform.py
+python src/features.py
+
+# 4. Lancer le dashboard
+streamlit run app.py
+```
+
+## Structure du projet
 
 dvf-immobilier/
 ├── data/
