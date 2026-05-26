@@ -26,11 +26,11 @@ Les acteurs de l'immobilier (agents, investisseurs, collectivités) manquent d'o
 
 | Couche | Outil |
 |---|---|
-| Ingestion | Python · requests |
-| Stockage intermédiaire | Parquet · PyArrow |
+| Ingestion | Python , requests |
+| Stockage intermédiaire | Parquet , PyArrow |
 | Transformation | Polars |
 | Feature engineering | Polars |
-| Visualisation | Streamlit · Plotly · Folium |
+| Visualisation | Streamlit , Plotly , Folium |
 | Déploiement | Streamlit Cloud |
 
 ## Architecture
