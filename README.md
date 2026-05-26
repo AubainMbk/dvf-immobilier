@@ -83,4 +83,4 @@ streamlit run app.py
 
 ---
 
-*Projet réalisé par Aubain Mbokou
+Projet réalisé par Aubain Mbokou
