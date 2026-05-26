@@ -1,4 +1,4 @@
-# 🏘️ DVF Immobilier — Analyse des marchés immobiliers français
+# 🏘️ DVF Immobilier : Analyse des marchés immobiliers français
 
 Dashboard data engineering construit sur les données open data DVF (Demandes de Valeurs Foncières) publiées par la DGFiP sur data.gouv.fr.
 
@@ -13,8 +13,8 @@ Les acteurs de l'immobilier (agents, investisseurs, collectivités) manquent d'o
 ## Périmètre
 
 - **4 départements** : Gironde (33), Paris (75), Rhône (69), Bouches-du-Rhône (13)
-- **Données** : transactions immobilières 2021–2023 — Maisons & Appartements
-- **Source** : [data.gouv.fr — DVF géolocalisées](https://www.data.gouv.fr/datasets/demandes-de-valeurs-foncieres-geolocalisees)
+- **Données** : transactions immobilières 2021–2023 : Maisons & Appartements
+- **Source** : [data.gouv.fr : DVF géolocalisées](https://www.data.gouv.fr/datasets/demandes-de-valeurs-foncieres-geolocalisees)
 
 ## Fonctionnalités
 
